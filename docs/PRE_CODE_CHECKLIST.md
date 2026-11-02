@@ -24,12 +24,12 @@ Cập nhật: 2026-11-02. **Chưa scaffold `h2q-website/`** — chờ yêu cầu
 ## Còn thiếu trước khi ship UI
 
 - [x] Chốt PRD / pages Phase 1 (structure design)
-- [ ] User duyệt spec `2026-11-02-h2q-website-structure-design.md`
-- [ ] Điền brand: slogan, màu, font, logo → `docs/BRAND.md` + `brand/`
-- [ ] Implementation plan trong `docs/superpowers/plans/`
-- [ ] Scaffold `h2q-website/` (khi được lệnh)
-- [ ] Tạo project Supabase Free + keys local (khi được lệnh)
-- [ ] Vercel (khi được lệnh) — R2 không cần Phase 1
+- [x] User lệnh code Phase 1 + spec structure
+- [x] Implementation plan `2026-11-02-h2q-phase1-implementation.md`
+- [x] Scaffold `h2q-website/` + public VI/EN + admin nhẹ
+- [x] Brand tokens CSS (logo file / số liệu thật còn thiếu)
+- [ ] Tạo project Supabase Free + chạy `docs/supabase/0001_init.sql` + `.env.local`
+- [ ] Commit / push / Vercel (khi được lệnh)
 
 ## Lệnh kích hoạt
 

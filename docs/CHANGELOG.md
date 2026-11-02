@@ -14,3 +14,4 @@ Format: `## YYYY-MM-DD` → bullet ngắn (thêm / sửa / xóa + lý do).
 - Vendor reference: `awesome/` ([sindresorhus/awesome](https://github.com/sindresorhus/awesome)), `awesome-web-design/` ([nicolesaidy/awesome-web-design](https://github.com/nicolesaidy/awesome-web-design)).
 - Kết nối remote GitHub `duongcanhquan/website-h2q` và push nền tảng.
 - Design Phase 1: Hybrid Bedrock × EPC — sitemap, copy, admin nhẹ, infra Supabase Free (không R2). Spec: `docs/superpowers/specs/2026-11-02-h2q-website-structure-design.md`. Cập nhật PRD / schema / deploy.
+- Scaffold `h2q-website/` (Next.js App Router + TS + Tailwind): public VI/EN, home Bedrock-inspired, admin nhẹ, lead form Supabase-ready, SQL `docs/supabase/0001_init.sql`. Design refs: `awesome-web-design/` + `awesome/`.
