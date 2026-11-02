@@ -36,7 +36,7 @@ function StatItem({
 }) {
   const n = useCountUp(value, active);
   return (
-    <div className="border-l border-border px-5 py-4 md:px-8">
+    <div className="min-w-0 border-border px-4 py-4 not-first:border-l md:px-8">
       <p className="font-display text-3xl font-semibold text-foreground md:text-4xl">
         {n}
         {suffix}
