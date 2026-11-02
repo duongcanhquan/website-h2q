@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { Pause, Play } from "lucide-react";
 import { useEffect, useMemo, useRef, useState } from "react";
+import { SteelConstructionFx } from "@/components/motion/steel-construction-fx";
 import { aboutTimeline } from "@/content/about-timeline";
 import { getCopy } from "@/content/site";
 import { cn } from "@/lib/cn";
@@ -127,14 +128,18 @@ export function AboutTimeline({ locale }: { locale: Locale }) {
                   fill
                   priority={i === 0}
                   className={cn(
-                    "object-cover transition-transform duration-[5200ms] ease-out",
-                    i === index && playing ? "scale-110" : "scale-100",
+                    "object-cover",
+                    i === index && playing
+                      ? "animate-ken-build"
+                      : "scale-105",
                   )}
                   sizes="(max-width:1024px) 100vw, 60vw"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/25 to-transparent" />
               </div>
             ))}
+
+            <SteelConstructionFx intensity="stage" active={playing} />
 
             <div className="absolute bottom-0 left-0 right-0 z-10 p-5 pl-8 sm:p-8 sm:pl-10">
               <p className="font-display text-4xl font-semibold text-primary md:text-5xl">

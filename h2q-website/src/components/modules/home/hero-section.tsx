@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { SteelConstructionFx } from "@/components/motion/steel-construction-fx";
 import { getCopy } from "@/content/site";
 import { pathFor, type Locale } from "@/lib/i18n";
 
@@ -19,19 +22,20 @@ export function HeroSection({ locale }: { locale: Locale }) {
         }
         fill
         priority
-        className="object-cover object-[center_30%] sm:object-center"
+        className="animate-ken-build object-cover object-[center_30%] sm:object-center"
         sizes="100vw"
       />
+      <SteelConstructionFx intensity="hero" />
       <div
-        className="absolute inset-0"
+        className="absolute inset-0 z-[6]"
         style={{ background: "var(--gradient-hero)" }}
         aria-hidden
       />
-      <div className="relative mx-auto flex min-h-[100svh] max-w-6xl flex-col justify-end px-4 pb-12 pt-24 sm:min-h-[88vh] sm:pb-16 md:px-6 md:pb-24 md:pt-28">
+      <div className="relative z-10 mx-auto flex min-h-[100svh] max-w-6xl flex-col justify-end px-4 pb-12 pt-24 sm:min-h-[88vh] sm:pb-16 md:px-6 md:pb-24 md:pt-28">
         <p className="font-display text-sm font-semibold tracking-[0.28em] text-primary uppercase">
           {copy.brand}
         </p>
-        <h1 className="mt-3 max-w-4xl font-display text-[1.85rem] leading-[1.12] font-semibold break-words text-foreground xs:text-[2rem] sm:mt-4 sm:text-4xl md:text-6xl lg:text-[4.25rem]">
+        <h1 className="mt-3 max-w-4xl font-display text-[1.85rem] leading-[1.12] font-semibold break-words text-foreground sm:mt-4 sm:text-4xl md:text-6xl lg:text-[4.25rem]">
           {copy.hero.headline}
         </h1>
         <p className="mt-4 max-w-2xl text-[0.95rem] leading-relaxed text-foreground/90 sm:mt-5 sm:text-base md:text-lg">

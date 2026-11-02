@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { SteelConstructionFx } from "@/components/motion/steel-construction-fx";
 import { services, servicePublicSlug } from "@/content/services";
 import { servicePath, type Locale } from "@/lib/i18n";
 
@@ -20,8 +23,12 @@ export function ServicesGrid({ locale }: { locale: Locale }) {
               className="object-cover transition duration-700 group-hover:scale-105"
               sizes="(max-width:640px) 100vw, (max-width:1024px) 50vw, 33vw"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent" />
-            <span className="absolute bottom-3 left-3 font-display text-sm text-primary">
+            <SteelConstructionFx
+              intensity="card"
+              className="opacity-70 transition group-hover:opacity-100"
+            />
+            <div className="absolute inset-0 z-[6] bg-gradient-to-t from-background/90 via-background/20 to-transparent" />
+            <span className="absolute bottom-3 left-3 z-10 font-display text-sm text-primary">
               {String(index + 1).padStart(2, "0")}
             </span>
           </div>

@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { SteelConstructionFx } from "@/components/motion/steel-construction-fx";
 import { services, servicePublicSlug } from "@/content/services";
 import { getCopy } from "@/content/site";
 import { SectionHeading } from "@/components/ui/section-heading";
@@ -22,7 +25,7 @@ export function PillarsSection({ locale }: { locale: Locale }) {
             href={servicePath(locale, servicePublicSlug(service, locale))}
             className="group overflow-hidden border border-border bg-surface shadow-sm transition hover:border-primary/70"
           >
-            <div className="relative aspect-[16/10]">
+            <div className="relative aspect-[16/10] overflow-hidden">
               <Image
                 src={service.image}
                 alt={service.title[locale]}
@@ -30,8 +33,12 @@ export function PillarsSection({ locale }: { locale: Locale }) {
                 className="object-cover transition duration-700 group-hover:scale-105"
                 sizes="(max-width:640px) 100vw, 33vw"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
-              <p className="absolute bottom-3 left-3 font-display text-sm text-primary">
+              <SteelConstructionFx
+                intensity="card"
+                className="opacity-60 transition group-hover:opacity-100"
+              />
+              <div className="absolute inset-0 z-[6] bg-gradient-to-t from-background/80 to-transparent" />
+              <p className="absolute bottom-3 left-3 z-10 font-display text-sm text-primary">
                 0{index + 1}
               </p>
             </div>

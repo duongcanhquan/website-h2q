@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import { notFound } from "next/navigation";
 import { SiteShell } from "@/components/common/site-shell";
+import { PostCover } from "@/components/modules/insights/post-cover";
 import { getPost, posts } from "@/content/posts";
 
 export function generateStaticParams() {
@@ -49,15 +49,8 @@ export default async function PostEn({
           {post.title[locale]}
         </h1>
         <p className="mt-4 text-base text-muted md:text-lg">{post.excerpt[locale]}</p>
-        <div className="relative mt-8 aspect-[16/9] overflow-hidden border border-border">
-          <Image
-            src={post.coverImage}
-            alt={post.title[locale]}
-            fill
-            priority
-            className="object-cover"
-            sizes="(max-width:768px) 100vw, 768px"
-          />
+        <div className="mt-8">
+          <PostCover src={post.coverImage} alt={post.title[locale]} priority />
         </div>
         <div className="mt-8 space-y-4 text-base leading-relaxed text-muted whitespace-pre-line md:text-lg">
           {post.body[locale]}

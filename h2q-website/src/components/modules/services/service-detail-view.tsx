@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { SteelConstructionFx } from "@/components/motion/steel-construction-fx";
 import type { ServiceItem } from "@/types/content";
 import { getCopy } from "@/content/site";
 import { pathFor, type Locale } from "@/lib/i18n";
@@ -22,13 +25,14 @@ export function ServiceDetailView({
             alt={service.title[locale]}
             fill
             priority
-            className="object-cover"
+            className="animate-ken-build object-cover"
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/85 to-background/55" />
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/40" />
+          <SteelConstructionFx intensity="stage" />
+          <div className="absolute inset-0 z-[6] bg-gradient-to-r from-background via-background/85 to-background/55" />
+          <div className="absolute inset-0 z-[6] bg-gradient-to-t from-background via-transparent to-background/40" />
         </div>
-        <div className="relative mx-auto max-w-6xl px-4 py-16 md:px-6 md:py-24">
+        <div className="relative z-10 mx-auto max-w-6xl px-4 py-16 md:px-6 md:py-24">
           <p className="text-sm font-medium text-primary">{service.title[locale]}</p>
           <h1 className="mt-3 max-w-3xl font-display text-3xl font-semibold leading-tight sm:text-4xl md:text-5xl">
             {service.headline[locale]}

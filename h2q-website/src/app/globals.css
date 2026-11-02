@@ -83,6 +83,122 @@ h3,
   }
 }
 
+@keyframes blueprint-drift {
+  from {
+    background-position: 0 0, 0 0, 0 0;
+  }
+  to {
+    background-position: 48px 24px, 48px 24px, 12px 6px;
+  }
+}
+
+@keyframes steel-draw {
+  from {
+    stroke-dashoffset: 120;
+    opacity: 0.2;
+  }
+  to {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes steel-draw-slow {
+  from {
+    stroke-dasharray: 8 420;
+    stroke-dashoffset: 420;
+    opacity: 0.25;
+  }
+  to {
+    stroke-dasharray: 420 0;
+    stroke-dashoffset: 0;
+    opacity: 0.85;
+  }
+}
+
+@keyframes survey-scan {
+  0% {
+    top: 12%;
+    opacity: 0;
+  }
+  8% {
+    opacity: 0.9;
+  }
+  92% {
+    opacity: 0.75;
+  }
+  100% {
+    top: 88%;
+    opacity: 0;
+  }
+}
+
+@keyframes metal-sheen {
+  0% {
+    transform: translateX(-140%) skewX(-12deg);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateX(320%) skewX(-12deg);
+    opacity: 0;
+  }
+}
+
+@keyframes spark {
+  0% {
+    transform: translate(0, 0) scale(0.6);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(18px, -42px) scale(0.1);
+    opacity: 0;
+  }
+}
+
+@keyframes weld-pulse {
+  0%,
+  100% {
+    opacity: 0.35;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.35);
+  }
+}
+
+@keyframes crane-drop {
+  0% {
+    top: 8%;
+    opacity: 0.2;
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    top: 72%;
+    opacity: 0.35;
+  }
+}
+
+@keyframes ken-build {
+  0% {
+    transform: scale(1.04) translate3d(0, 0, 0);
+  }
+  100% {
+    transform: scale(1.12) translate3d(-1.5%, -1%, 0);
+  }
+}
+
 .animate-fade-up {
   animation: fade-up 0.65s ease-out both;
 }
@@ -94,6 +210,44 @@ h3,
 
 .animate-film-grain {
   animation: film-grain 2.8s ease-in-out infinite;
+}
+
+.animate-blueprint-drift {
+  animation: blueprint-drift 28s linear infinite;
+}
+
+.animate-steel-draw {
+  stroke-dasharray: 120;
+  animation: steel-draw 1.4s ease-out both;
+}
+
+.animate-steel-draw-slow {
+  animation: steel-draw-slow 3.2s ease-in-out infinite alternate;
+}
+
+.animate-survey-scan {
+  animation: survey-scan 5.5s ease-in-out infinite;
+}
+
+.animate-metal-sheen {
+  animation: metal-sheen 7.5s ease-in-out infinite;
+}
+
+.animate-spark {
+  animation: spark 2.2s ease-out infinite;
+}
+
+.animate-weld-pulse {
+  animation: weld-pulse 1.8s ease-in-out infinite;
+}
+
+.animate-crane-drop {
+  animation: crane-drop 6.5s ease-in-out infinite;
+}
+
+.animate-ken-build {
+  animation: ken-build 8s ease-in-out infinite alternate;
+  will-change: transform;
 }
 
 @media (max-width: 640px) {
@@ -108,7 +262,16 @@ h3,
   }
   .animate-fade-up,
   .animate-draw-line,
-  .animate-film-grain {
+  .animate-film-grain,
+  .animate-blueprint-drift,
+  .animate-steel-draw,
+  .animate-steel-draw-slow,
+  .animate-survey-scan,
+  .animate-metal-sheen,
+  .animate-spark,
+  .animate-weld-pulse,
+  .animate-crane-drop,
+  .animate-ken-build {
     animation: none;
   }
 }
