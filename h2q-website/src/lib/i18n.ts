@@ -1,3 +1,5 @@
+import { getServiceByPublicSlug, servicePublicSlug } from "@/content/services";
+
 export const locales = ["vi", "en"] as const;
 export type Locale = (typeof locales)[number];
 export const defaultLocale: Locale = "vi";
@@ -47,10 +49,21 @@ export function postPath(locale: Locale, slug: string) {
 
 export function switchLocalePath(currentLocale: Locale, pathname: string) {
   const target: Locale = currentLocale === "vi" ? "en" : "vi";
+
+  const serviceMatch =
+    currentLocale === "vi"
+      ? pathname.match(/^\/dich-vu\/([^/]+)/)
+      : pathname.match(/^\/en\/services\/([^/]+)/);
+  if (serviceMatch) {
+    const service = getServiceByPublicSlug(serviceMatch[1], currentLocale);
+    if (service) {
+      return servicePath(target, servicePublicSlug(service, target));
+    }
+  }
+
   const map: Array<[RegExp, string]> =
     currentLocale === "vi"
       ? [
-          [/^\/dich-vu\/([^/]+)/, `/en/services/$1`],
           [/^\/dich-vu/, "/en/services"],
           [/^\/du-an\/([^/]+)/, `/en/projects/$1`],
           [/^\/du-an/, "/en/projects"],
@@ -61,7 +74,6 @@ export function switchLocalePath(currentLocale: Locale, pathname: string) {
           [/^\/$/, "/en"],
         ]
       : [
-          [/^\/en\/services\/([^/]+)/, `/dich-vu/$1`],
           [/^\/en\/services/, "/dich-vu"],
           [/^\/en\/projects\/([^/]+)/, `/du-an/$1`],
           [/^\/en\/projects/, "/du-an"],

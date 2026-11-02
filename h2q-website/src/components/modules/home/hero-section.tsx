@@ -9,7 +9,7 @@ const HERO_IMAGE =
 export function HeroSection({ locale }: { locale: Locale }) {
   const copy = getCopy(locale);
   return (
-    <section className="relative isolate min-h-[88vh] overflow-hidden bg-background">
+    <section className="relative isolate min-h-[100svh] overflow-hidden bg-background sm:min-h-[88vh]">
       <Image
         src={HERO_IMAGE}
         alt={
@@ -19,7 +19,7 @@ export function HeroSection({ locale }: { locale: Locale }) {
         }
         fill
         priority
-        className="object-cover object-center"
+        className="object-cover object-[center_30%] sm:object-center"
         sizes="100vw"
       />
       <div
@@ -27,17 +27,17 @@ export function HeroSection({ locale }: { locale: Locale }) {
         style={{ background: "var(--gradient-hero)" }}
         aria-hidden
       />
-      <div className="relative mx-auto flex min-h-[88vh] max-w-6xl flex-col justify-end px-4 pb-16 pt-28 md:px-6 md:pb-24">
+      <div className="relative mx-auto flex min-h-[100svh] max-w-6xl flex-col justify-end px-4 pb-12 pt-24 sm:min-h-[88vh] sm:pb-16 md:px-6 md:pb-24 md:pt-28">
         <p className="font-display text-sm font-semibold tracking-[0.28em] text-primary uppercase">
           {copy.brand}
         </p>
-        <h1 className="mt-4 max-w-4xl font-display text-[2rem] leading-[1.15] font-semibold break-words text-foreground sm:text-4xl md:text-6xl lg:text-[4.25rem]">
+        <h1 className="mt-3 max-w-4xl font-display text-[1.85rem] leading-[1.12] font-semibold break-words text-foreground xs:text-[2rem] sm:mt-4 sm:text-4xl md:text-6xl lg:text-[4.25rem]">
           {copy.hero.headline}
         </h1>
-        <p className="mt-5 max-w-2xl text-base leading-relaxed text-foreground/90 md:text-lg">
+        <p className="mt-4 max-w-2xl text-[0.95rem] leading-relaxed text-foreground/90 sm:mt-5 sm:text-base md:text-lg">
           {copy.hero.sub}
         </p>
-        <div className="mt-8 flex w-full max-w-md flex-col gap-3 sm:max-w-none sm:flex-row sm:flex-wrap">
+        <div className="mt-7 flex w-full flex-col gap-3 sm:mt-8 sm:max-w-none sm:flex-row sm:flex-wrap">
           <Link
             href={pathFor(locale, "contact")}
             className="inline-flex items-center justify-center bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-lg shadow-black/30 transition hover:brightness-110"

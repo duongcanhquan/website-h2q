@@ -1,7 +1,31 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { SiteShell } from "@/components/common/site-shell";
-import { getPost } from "@/content/posts";
+import { getPost, posts } from "@/content/posts";
+
+export function generateStaticParams() {
+  return posts.map((p) => ({ slug: p.slug }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const post = getPost(slug);
+  if (!post) return {};
+  return {
+    title: `${post.title.en} | H2Q`,
+    description: post.excerpt.en,
+    openGraph: {
+      title: post.title.en,
+      description: post.excerpt.en,
+      images: [{ url: post.coverImage }],
+    },
+  };
+}
 
 export default async function PostEn({
   params,
@@ -15,21 +39,27 @@ export default async function PostEn({
 
   return (
     <SiteShell locale={locale}>
-      <article className="mx-auto max-w-3xl px-4 py-16 md:px-6">
-        <p className="text-sm text-muted">{post.publishedAt}</p>
-        <h1 className="mt-3 font-display text-4xl font-semibold">
+      <article className="mx-auto max-w-3xl px-4 py-12 md:px-6 md:py-16">
+        <div className="flex flex-wrap items-center gap-2 text-sm text-muted">
+          <span className="text-steel">{post.category[locale]}</span>
+          <span aria-hidden>·</span>
+          <time dateTime={post.publishedAt}>{post.publishedAt}</time>
+        </div>
+        <h1 className="mt-3 font-display text-3xl font-semibold leading-tight sm:text-4xl">
           {post.title[locale]}
         </h1>
+        <p className="mt-4 text-base text-muted md:text-lg">{post.excerpt[locale]}</p>
         <div className="relative mt-8 aspect-[16/9] overflow-hidden border border-border">
           <Image
             src={post.coverImage}
             alt={post.title[locale]}
             fill
+            priority
             className="object-cover"
-            sizes="100vw"
+            sizes="(max-width:768px) 100vw, 768px"
           />
         </div>
-        <div className="mt-8 space-y-4 text-lg leading-relaxed text-muted whitespace-pre-line">
+        <div className="mt-8 space-y-4 text-base leading-relaxed text-muted whitespace-pre-line md:text-lg">
           {post.body[locale]}
         </div>
       </article>

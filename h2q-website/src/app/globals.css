@@ -73,6 +73,16 @@ h3,
   }
 }
 
+@keyframes film-grain {
+  0%,
+  100% {
+    opacity: 0.035;
+  }
+  50% {
+    opacity: 0.06;
+  }
+}
+
 .animate-fade-up {
   animation: fade-up 0.65s ease-out both;
 }
@@ -82,12 +92,23 @@ h3,
   animation: draw-line 0.8s ease-out both;
 }
 
+.animate-film-grain {
+  animation: film-grain 2.8s ease-in-out infinite;
+}
+
+@media (max-width: 640px) {
+  .font-display {
+    letter-spacing: -0.03em;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
   }
   .animate-fade-up,
-  .animate-draw-line {
+  .animate-draw-line,
+  .animate-film-grain {
     animation: none;
   }
 }

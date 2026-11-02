@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { SiteShell } from "@/components/common/site-shell";
@@ -6,37 +7,53 @@ import { posts } from "@/content/posts";
 import { getCopy } from "@/content/site";
 import { postPath } from "@/lib/i18n";
 
+export const metadata: Metadata = {
+  title: "Construction insights | H2Q",
+  description:
+    "H2Q owner-focused articles on schedule control, buildable design, MEP, fit-out, site safety and handover.",
+};
+
 export default function InsightsEn() {
   const locale = "en" as const;
   const copy = getCopy(locale);
   return (
     <SiteShell locale={locale}>
       <PageHero title={copy.pages.insights.title} sub={copy.pages.insights.sub} />
-      <section className="mx-auto grid max-w-6xl gap-6 px-4 py-16 md:grid-cols-2 md:px-6">
-        {posts.map((post) => (
-          <Link
-            key={post.slug}
-            href={postPath(locale, post.slug)}
-            className="overflow-hidden border border-border bg-surface"
-          >
-            <div className="relative aspect-[16/9]">
-              <Image
-                src={post.coverImage}
-                alt={post.title[locale]}
-                fill
-                className="object-cover"
-                sizes="(max-width:768px) 100vw, 50vw"
-              />
-            </div>
-            <div className="p-5">
-              <p className="text-xs text-muted">{post.publishedAt}</p>
-              <h2 className="mt-2 font-display text-xl font-semibold">
-                {post.title[locale]}
-              </h2>
-              <p className="mt-2 text-sm text-muted">{post.excerpt[locale]}</p>
-            </div>
-          </Link>
-        ))}
+      <section className="mx-auto grid max-w-6xl gap-5 px-4 py-12 sm:grid-cols-2 sm:py-16 md:gap-6 md:px-6 lg:grid-cols-3">
+        {posts.length === 0 ? (
+          <p className="text-muted">{copy.pages.insights.empty}</p>
+        ) : (
+          posts.map((post) => (
+            <Link
+              key={post.slug}
+              href={postPath(locale, post.slug)}
+              className="group overflow-hidden border border-border bg-surface transition hover:border-primary/40"
+            >
+              <div className="relative aspect-[16/10]">
+                <Image
+                  src={post.coverImage}
+                  alt={post.title[locale]}
+                  fill
+                  className="object-cover transition duration-700 group-hover:scale-105"
+                  sizes="(max-width:640px) 100vw, (max-width:1024px) 50vw, 33vw"
+                />
+              </div>
+              <div className="p-4 sm:p-5">
+                <div className="flex flex-wrap items-center gap-2 text-xs text-muted">
+                  <span className="text-steel">{post.category[locale]}</span>
+                  <span aria-hidden>·</span>
+                  <time dateTime={post.publishedAt}>{post.publishedAt}</time>
+                </div>
+                <h2 className="mt-2 font-display text-lg font-semibold leading-snug md:text-xl">
+                  {post.title[locale]}
+                </h2>
+                <p className="mt-2 text-sm leading-relaxed text-muted">
+                  {post.excerpt[locale]}
+                </p>
+              </div>
+            </Link>
+          ))
+        )}
       </section>
     </SiteShell>
   );

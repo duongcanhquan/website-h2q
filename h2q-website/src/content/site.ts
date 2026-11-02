@@ -143,7 +143,7 @@ export const siteCopy: Dictionary = {
     pages: {
       services: {
         title: "Dịch vụ",
-        sub: "Ba trụ — thiết kế, thi công, quản lý dự án.",
+        sub: "Từ thiết kế, thi công, MEP đến quản lý dự án và bàn giao — một hệ năng lực cho chủ đầu tư.",
       },
       projects: {
         title: "Dự án",
@@ -154,14 +154,18 @@ export const siteCopy: Dictionary = {
         title: "Về H2Q",
         sub: "Đối tác xây dựng cho doanh nghiệp cần kiểm soát đầu tư.",
         body: [
-          "H2Q đồng hành chủ đầu tư từ ý tưởng đến bàn giao, với kỷ luật hiện trường và minh bạch tiến độ.",
-          "Chúng tôi ưu tiên phương án khả thi thi công, kiểm soát thay đổi và một đầu mối điều phối.",
-          "Website này lấy cảm hứng cấu trúc tin cậy từ template nhà thầu (Bedrock / uiCookies), triển khai hiện đại trên Next.js.",
+          "H2Q đồng hành chủ đầu tư từ ý tưởng đến bàn giao: thiết kế khả thi thi công, hiện trường kỷ luật, và quản lý dự án một đầu mối.",
+          "Chúng tôi phục vụ nhà xưởng, văn phòng, thương mại và cải tạo — với minh bạch tiến độ, chất lượng và ngân sách.",
+          "Timeline dưới đây kể hành trình phát triển năng lực của H2Q — từng giai đoạn có ý nghĩa với cách chúng tôi giao hàng hôm nay.",
         ],
+        timelineTitle: "Hành trình H2Q",
+        timelineSub: "Timeline cinematic — phát triển năng lực theo năm, có thể phát / tạm dừng như một thước phim.",
+        play: "Phát",
+        pause: "Tạm dừng",
       },
       insights: {
         title: "Tin tức & góc nhìn",
-        sub: "Cập nhật dự án, quy trình và kiến thức đầu tư xây dựng.",
+        sub: "Bài viết cho chủ đầu tư: tiến độ, thiết kế, MEP, fit-out và bàn giao.",
         empty: "Chưa có bài viết.",
       },
       contact: {
@@ -173,6 +177,11 @@ export const siteCopy: Dictionary = {
         work: "Việc đã làm",
         outcome: "Kết quả",
         facts: "Thông số",
+      },
+      serviceDetail: {
+        scope: "Phạm vi",
+        outcomes: "Kết quả mang lại",
+        cta: "Trao đổi gói dịch vụ này",
       },
     },
   },
@@ -318,7 +327,7 @@ export const siteCopy: Dictionary = {
     pages: {
       services: {
         title: "Services",
-        sub: "Three pillars — design, construction, project management.",
+        sub: "From design, construction and MEP to project management and handover — one capability system for owners.",
       },
       projects: {
         title: "Projects",
@@ -329,14 +338,18 @@ export const siteCopy: Dictionary = {
         title: "About H2Q",
         sub: "A construction partner for owners who need investment control.",
         body: [
-          "H2Q supports owners from concept to handover with site discipline and transparent progress.",
-          "We favour buildable options, change control and a single coordination desk.",
-          "Site IA draws on contractor-trust patterns (Bedrock / uiCookies), built modern on Next.js.",
+          "H2Q supports owners from concept to handover: buildable design, disciplined sites, and single-desk project management.",
+          "We serve industrial, office, commercial and renovation work — with transparent schedule, quality and budget control.",
+          "The timeline below tells how H2Q’s delivery capability grew — each chapter still shapes how we work today.",
         ],
+        timelineTitle: "The H2Q journey",
+        timelineSub: "A cinematic year-by-year timeline — play or pause like a film strip of our growth.",
+        play: "Play",
+        pause: "Pause",
       },
       insights: {
         title: "Insights",
-        sub: "Project updates, process notes and construction investment thinking.",
+        sub: "Owner-focused writing on schedule, design, MEP, fit-out and handover.",
         empty: "No posts yet.",
       },
       contact: {
@@ -348,6 +361,11 @@ export const siteCopy: Dictionary = {
         work: "Work done",
         outcome: "Outcome",
         facts: "Facts",
+      },
+      serviceDetail: {
+        scope: "Scope",
+        outcomes: "Outcomes",
+        cta: "Discuss this service",
       },
     },
   },
