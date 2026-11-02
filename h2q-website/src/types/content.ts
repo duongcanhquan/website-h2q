@@ -16,6 +16,26 @@ export interface LocalizedString {
   en: string;
 }
 
+export interface ServiceHighlight {
+  label: LocalizedString;
+  value: LocalizedString;
+}
+
+export interface ServiceGalleryImage {
+  src: string;
+  caption: LocalizedString;
+}
+
+export interface ServiceProcessStep {
+  title: LocalizedString;
+  detail: LocalizedString;
+}
+
+export interface ServiceSection {
+  title: LocalizedString;
+  body: LocalizedString;
+}
+
 export interface ServiceItem {
   slug: string;
   enSlug: string;
@@ -27,8 +47,14 @@ export interface ServiceItem {
   seoTitle: LocalizedString;
   seoDescription: LocalizedString;
   image: string;
+  gallery: ServiceGalleryImage[];
+  highlights: ServiceHighlight[];
+  audience: LocalizedString;
+  sections: ServiceSection[];
+  process: ServiceProcessStep[];
   scope: LocalizedString[];
   outcomes: LocalizedString[];
+  deliverables: LocalizedString[];
 }
 
 export interface ProjectItem {
@@ -130,6 +156,15 @@ export interface SiteCopy {
       scope: string;
       outcomes: string;
       cta: string;
+      highlights: string;
+      audience: string;
+      process: string;
+      gallery: string;
+      deliverables: string;
+      related: string;
+      play: string;
+      pause: string;
+      overview: string;
     };
   };
 }

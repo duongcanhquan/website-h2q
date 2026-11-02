@@ -8,6 +8,9 @@ Format: `## YYYY-MM-DD` → bullet ngắn (thêm / sửa / xóa + lý do).
 
 ## 2026-11-02
 
+- Làm kỹ trang chi tiết dịch vụ: gallery Remotion (play/pause), highlights, audience, sections SEO, process, deliverables, related services + steel motion.
+- Thêm overlay motion sắt thép / blueprint trên hero, About timeline, dịch vụ và cover tin tức.
+- Mở rộng 7 dịch vụ + ~10 bài tin, timeline cinematic Về H2Q, tối ưu mobile.
 - Bootstrap workspace theo mẫu Mirror VMIT (option A).
 - Thêm `.cursorrules`, `AGENTS.md`, `.cursor/rules/h2q-*.mdc`, skill `h2q-website-kickoff`.
 - Thêm skeleton docs: PRD, BRAND, ARCHITECTURE, DATABASE_SCHEMA, deploy, checklist, ENV example.
