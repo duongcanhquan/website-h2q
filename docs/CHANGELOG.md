@@ -13,3 +13,4 @@ Format: `## YYYY-MM-DD` → bullet ngắn (thêm / sửa / xóa + lý do).
 - Thêm skeleton docs: PRD, BRAND, ARCHITECTURE, DATABASE_SCHEMA, deploy, checklist, ENV example.
 - Vendor reference: `awesome/` ([sindresorhus/awesome](https://github.com/sindresorhus/awesome)), `awesome-web-design/` ([nicolesaidy/awesome-web-design](https://github.com/nicolesaidy/awesome-web-design)).
 - Kết nối remote GitHub `duongcanhquan/website-h2q` và push nền tảng.
+- Design Phase 1: Hybrid Bedrock × EPC — sitemap, copy, admin nhẹ, infra Supabase Free (không R2). Spec: `docs/superpowers/specs/2026-11-02-h2q-website-structure-design.md`. Cập nhật PRD / schema / deploy.

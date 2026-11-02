@@ -15,7 +15,9 @@
 | Tên thương hiệu | **H2Q** |
 | Slogan UI | `[H2Q: slogan]` |
 | Logo | `brand/` — `[H2Q: path logo]` |
-| Ngôn ngữ UI mặc định | `[H2Q: vi / en / …]` |
+| Ngôn ngữ UI | **VI + EN** (mặc định VI tại `/`) |
+| Định vị | Thiết kế · Thi công · Quản lý dự án (EPC cho chủ đầu tư) |
+| Tone | Tự tin, rõ, bằng chứng; hiện đại — xem structure design spec |
 
 ## Palette (khóa — đăng ký token trước khi dùng trong component)
 
