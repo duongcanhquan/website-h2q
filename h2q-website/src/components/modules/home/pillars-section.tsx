@@ -14,7 +14,7 @@ export function PillarsSection({ locale }: { locale: Locale }) {
           <Link
             key={service.slug}
             href={servicePath(locale, servicePublicSlug(service, locale))}
-            className="group border border-border bg-surface p-6 transition hover:border-primary/60"
+            className="group border border-border bg-surface p-6 shadow-sm transition hover:border-primary/70 hover:bg-surface-2"
           >
             <p className="font-display text-sm text-primary">0{index + 1}</p>
             <h3 className="mt-4 font-display text-2xl font-semibold text-foreground">

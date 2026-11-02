@@ -1,42 +1,30 @@
 @import "tailwindcss";
 
-/* Brand tokens — construction modern (Coolors / UI Gradients inspired via awesome-web-design) */
-:root {
-  --background: #0c1117;
-  --foreground: #f2f0eb;
-  --muted: #9aa3b5;
-  --surface: #151b24;
-  --surface-2: #1c2430;
-  --border: #2a3444;
-  --primary: #d4a017;
-  --primary-foreground: #14110a;
-  --steel: #4f8faf;
-  --success: #3d9a6a;
-  --danger: #c45c4a;
-  --gradient-hero: linear-gradient(
-    135deg,
-    rgba(12, 17, 23, 0.55) 0%,
-    rgba(21, 27, 36, 0.82) 55%,
-    rgba(12, 17, 23, 0.92) 100%
-  );
-  --radius: 0.25rem;
+/* Direct theme values so Tailwind v4 emits utilities (bg-primary, text-muted, …) */
+@theme {
+  --color-background: #0c1117;
+  --color-foreground: #f3f1ea;
+  --color-muted: #a7b0c0;
+  --color-surface: #151b24;
+  --color-surface-2: #1c2430;
+  --color-border: #2f3a4c;
+  --color-primary: #e0ae22;
+  --color-primary-foreground: #16120a;
+  --color-steel: #5b9abb;
+  --color-success: #3d9a6a;
+  --color-danger: #c45c4a;
+  --font-sans: var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-syne), ui-sans-serif, system-ui, sans-serif;
+  --radius-sm: 0.25rem;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-muted: var(--muted);
-  --color-surface: var(--surface);
-  --color-surface-2: var(--surface-2);
-  --color-border: var(--border);
-  --color-primary: var(--primary);
-  --color-primary-foreground: var(--primary-foreground);
-  --color-steel: var(--steel);
-  --color-success: var(--success);
-  --color-danger: var(--danger);
-  --font-sans: var(--font-dm-sans);
-  --font-display: var(--font-syne);
-  --radius-sm: var(--radius);
+:root {
+  --gradient-hero: linear-gradient(
+    180deg,
+    rgba(12, 17, 23, 0.35) 0%,
+    rgba(12, 17, 23, 0.55) 42%,
+    rgba(12, 17, 23, 0.92) 100%
+  );
 }
 
 html {
@@ -44,9 +32,9 @@ html {
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-dm-sans), sans-serif;
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
   text-rendering: optimizeLegibility;
 }
 
@@ -54,19 +42,19 @@ h1,
 h2,
 h3,
 .font-display {
-  font-family: var(--font-syne), sans-serif;
+  font-family: var(--font-display);
   letter-spacing: -0.02em;
 }
 
 ::selection {
-  background: color-mix(in oklab, var(--primary) 45%, transparent);
-  color: var(--foreground);
+  background: color-mix(in oklab, var(--color-primary) 45%, transparent);
+  color: var(--color-foreground);
 }
 
 @keyframes fade-up {
   from {
-    opacity: 0;
-    transform: translateY(18px);
+    opacity: 0.01;
+    transform: translateY(14px);
   }
   to {
     opacity: 1;
@@ -84,7 +72,7 @@ h3,
 }
 
 .animate-fade-up {
-  animation: fade-up 0.7s ease-out both;
+  animation: fade-up 0.65s ease-out both;
 }
 
 .animate-draw-line {
