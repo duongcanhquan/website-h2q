@@ -1,0 +1,38 @@
+---
+description: Bước bắt buộc ĐẦU TIÊN trước khi coding website H2Q — tuân thủ tuyệt đối
+alwaysApply: true
+---
+
+# H2Q — Coding Gate (làm trước khi viết code)
+
+Khi user yêu cầu xây/sửa website, agent **PHẢI** làm theo thứ tự này. Không nhảy cóc.
+
+## 0. Đọc bộ nhớ dự án
+
+1. Đọc `AGENTS.md` (root workspace).
+2. Đọc `docs/PRD.md`, `docs/BRAND.md`, `docs/ARCHITECTURE.md`, `docs/DATABASE_SCHEMA.md`, `docs/CHANGELOG.md`.
+3. Đọc references: `awesome-web-design/`, `awesome/readme.md`.
+
+## 1. Gate thiết kế (không code nếu chưa qua)
+
+- Brainstorm / chốt hướng UI với user nếu chưa có spec được duyệt.
+- Spec lưu tại `docs/superpowers/specs/` khi đã duyệt.
+- Plan lưu tại `docs/superpowers/plans/` trước khi triển khai lớn.
+
+## 2. Checklist pre-code (in ra / xác nhận ngắn)
+
+- [ ] Stack: Next.js App Router + TS strict + Tailwind + shadcn (+ Supabase nếu backend) — xem `h2q-tech-stack`
+- [ ] Brand/copy H2Q đã có (hoặc `[H2Q:…]`) — không ship lorem / brand mẫu khác
+- [ ] Palette → CSS variables/Tailwind tokens — không hex lạ (`h2q-ui-states`)
+- [ ] Font expressive (không Inter/Roboto/Arial/system)
+- [ ] Design compliance + loading/empty/error cho UI dữ liệu
+- [ ] Coding standards: no `any`, hooks tách UI, kebab-case files
+- [ ] Không commit / push / deploy trừ khi user cho phép rõ
+
+## 3. Chỉ sau khi xong bước 0–2 mới được
+
+Scaffold/`create-next-app`, sửa `h2q-website/`, đổi theme hàng loạt.
+
+## 4. Sau mỗi đợt thay đổi có ý nghĩa
+
+Cập nhật `docs/CHANGELOG.md` (ngày + mục thay đổi ngắn).

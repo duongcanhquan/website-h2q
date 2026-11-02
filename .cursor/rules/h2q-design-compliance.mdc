@@ -1,0 +1,42 @@
+---
+description: Chuẩn thiết kế UI bắt buộc cho website H2Q + nguồn tài nguyên local
+alwaysApply: true
+---
+
+# H2Q — Design Compliance
+
+## Nguồn bắt buộc tham chiếu
+
+| Vai trò | Path local |
+|---------|------------|
+| Links design | `awesome-web-design/` |
+| Mục lục awesome lists | `awesome/readme.md` |
+| Brand tokens / logo | `brand/`, `docs/BRAND.md` |
+
+## Layout & hero
+
+- First viewport = một composition (không dashboard).
+- Brand/product name là tín hiệu hero-level — không chỉ chữ nav.
+- Hero full-bleed; không inset/card/collage hero.
+- Hero budget: brand + 1 headline + 1 câu phụ + 1 nhóm CTA + 1 ảnh chủ. Không stats/schedule/promo trong viewport đầu.
+- Không overlay badge/chip/sticker lên hero media.
+- Mỗi section: một mục đích, một headline, thường một câu phụ.
+
+## Visual
+
+- Màu / radius / spacing chỉ qua theme tokens — brand khóa trong `docs/BRAND.md`.
+- Không nền phẳng đơn sắc: dùng gradient token, ảnh, pattern nhẹ.
+- Font expressive — tránh Inter/Roboto/Arial/system.
+- Tránh cụm AI mặc định: purple-on-white, cream+#terracotta+serif, broadsheet dày.
+- Tránh: dark mode mặc định, glow, pill clusters, multi-shadow, emoji trang trí.
+- Cards: mặc định không dùng; hero không card; chỉ dùng khi là container tương tác.
+
+## Motion & responsive
+
+- Ít nhất 2–3 motion có chủ đích (hierarchy/presence), không nhiễu.
+- Desktop + mobile phải đọc được.
+
+## Nội dung
+
+- Thay hết lorem / brand mẫu bằng nội dung H2Q (hoặc `[H2Q:…]` placeholder).
+- Form contact: ghi rõ là UI-only nếu chưa có backend.

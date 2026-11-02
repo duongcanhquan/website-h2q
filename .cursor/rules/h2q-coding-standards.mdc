@@ -1,0 +1,42 @@
+---
+description: Nguyên tắc coding TypeScript, architecture, đặt tên — H2Q
+alwaysApply: true
+globs: h2q-website/**/*.{ts,tsx}
+---
+
+# H2Q — Coding Standards
+
+## TypeScript
+
+- Bật **strict mode**; không tắt `strict`, `noImplicitAny`, `strictNullChecks`.
+- **Tuyệt đối không dùng `any`**. Dùng `unknown` + narrow, hoặc type/interface cụ thể.
+- Không `as any`, không `@ts-ignore` / `@ts-expect-error` trừ khi có comment lý do + ticket và user đồng ý.
+
+```ts
+// ❌ BAD
+const data: any = await res.json()
+
+// ✅ GOOD
+const data: unknown = await res.json()
+const item = itemSchema.parse(data)
+```
+
+## Architecture
+
+- **Functional Components** only (không class components).
+- Tách **logic** (custom hooks / `lib/` / server actions) khỏi **UI** (`components/ui`, `components/...`).
+- Clean boundaries: `app/` (routes) → `components/` (UI) → `hooks/` / `lib/` (logic) → `types/`.
+- Server Components mặc định; thêm `"use client"` chỉ khi cần state/effect/browser API.
+
+## Đặt tên
+
+| Loại | Quy tắc | Ví dụ |
+|------|---------|--------|
+| File / folder | **kebab-case** | `product-card.tsx`, `use-products.ts` |
+| Component | **PascalCase** | `ProductCard` |
+| Biến / hàm | **camelCase** | `fetchProducts`, `isLoading` |
+| Type / Interface | **PascalCase** | `Product`, `ProductListProps` |
+| Hằng số | **SCREAMING_SNAKE** hoặc camel | `MAX_PAGE_SIZE` |
+| CSS vars / tokens | kebab | `--color-primary` |
+
+shadcn primitives giữ tên thư viện (`button.tsx`); file feature/domain vẫn kebab-case.

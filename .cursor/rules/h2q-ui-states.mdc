@@ -1,0 +1,43 @@
+---
+description: Design system tokens + trạng thái loading/empty/error bắt buộc
+alwaysApply: true
+---
+
+# H2Q — Design System & Data UI States
+
+## Design system nhất quán
+
+- Màu, radius, spacing **chỉ** qua CSS variables / Tailwind theme tokens (vd: `bg-primary`, `rounded-lg`, `gap-4`).
+- Border-radius / spacing theo scale Tailwind đã cấu hình; không số magic tùy hứng (`rounded-[13px]`, `mt-[37px]`).
+
+## Cấm tự ý bịa màu ngoài theme
+
+```tsx
+// ❌ BAD
+<div className="bg-[#9b59b6] text-[#f1c40f]">
+
+// ✅ GOOD
+<div className="bg-primary text-primary-foreground">
+```
+
+Cần màu mới → thêm vào theme tokens + `docs/BRAND.md` trước, rồi mới dùng.
+
+## Trạng thái dữ liệu (bắt buộc)
+
+Mọi component/page **hiển thị dữ liệu bất đồng bộ** phải có đủ 3 trạng thái:
+
+| State | Yêu cầu |
+|-------|---------|
+| **loading** | Skeleton / spinner rõ ràng, không layout jump mạnh |
+| **empty** | Copy ngắn + hướng dẫn |
+| **error** | Message người đọc được + cách thử lại nếu hợp lý |
+
+```tsx
+// Pattern tối thiểu
+if (isLoading) return <ListSkeleton />
+if (error) return <ListError onRetry={refetch} />
+if (!items.length) return <ListEmpty />
+return <List items={items} />
+```
+
+Static/mock phase: vẫn tách nhánh empty; loading có thể short-circuit nếu data đồng bộ — nhưng API/fetch sau này không được bỏ sót.

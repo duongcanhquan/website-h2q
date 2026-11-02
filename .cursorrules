@@ -1,0 +1,42 @@
+# WEBSITE H2Q — Cursor Rules Index
+
+Chi tiết nằm trong `.cursor/rules/*.mdc` (alwaysApply). Agent phải tuân thủ toàn bộ.
+
+## Tech Stack cố định
+
+- **Next.js App Router** + **TypeScript strict**
+- **Tailwind CSS** + CSS variables (design tokens)
+- **shadcn/ui** (+ lucide-react)
+- **Supabase** khi cần backend
+- Design links: `awesome-web-design/`
+- Awesome meta lists: `awesome/readme.md`
+
+## Coding
+
+- Không `any`; Functional Components; hooks tách khỏi UI
+- File kebab-case · Component PascalCase · biến/hàm camelCase
+
+## UI/UX
+
+- Chỉ màu/spacing/radius trong theme — không bịa hex ngoài theme
+- Mọi UI dữ liệu: loading + empty + error
+- Hero/brand rules: xem `h2q-design-compliance.mdc`
+
+## Tài liệu sản phẩm (đọc trước khi code)
+
+- `docs/PRD.md` — mục tiêu, persona, user flows
+- `docs/BRAND.md` — logo, slogan, màu khóa
+- `docs/ARCHITECTURE.md` — cấu trúc `src/`
+- `docs/DATABASE_SCHEMA.md` — field/RLS Supabase — **không đoán tên cột**
+- `docs/CHANGELOG.md` — nhật ký chỉnh sửa workspace / app
+
+## Brand khóa
+
+- **H2Q** · slogan / màu / logo: xem `docs/BRAND.md` (điền trước khi ship UI)
+- Placeholder nội dung: `[H2Q:…]` — không ship lorem / brand mẫu khác
+
+## Quy trình
+
+1. Coding Gate → 2. Design → 3. Implement theo stack → 4. Verify → 5. Dừng (không tự commit/deploy trừ khi user cho phép)
+
+Xem: `AGENTS.md`, `.cursor/skills/h2q-website-kickoff/SKILL.md`

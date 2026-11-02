@@ -1,0 +1,23 @@
+---
+description: Cấm commit/push/deploy tự động — chỉ khi user cho phép rõ
+alwaysApply: true
+---
+
+# H2Q — Git & Deploy Gate
+
+Không tự động commit, push, hay deploy bản mới nếu chưa có sự cho phép rõ trong tin nhắn.
+
+1. Thao tác trước trên máy (sửa, test, đối chiếu).
+2. Cập nhật `docs/CHANGELOG.md` khi thay đổi có ý nghĩa.
+3. Dừng lại báo kết quả.
+4. Chỉ commit / push / deploy khi được phép.
+
+Secrets (`.env`, credentials, R2 secret, Supabase service role) không commit.
+Không `--force` lên main/master trừ khi user yêu cầu rõ.
+
+## Remote đã khóa
+
+- GitHub: https://github.com/duongcanhquan/website-h2q
+- Hosting / media: xem `docs/DEPLOYMENT_AND_STORAGE.md` (điền khi sẵn sàng)
+
+Khi được lệnh push: remote phải là repo trên; không push nhầm sang repo khác.

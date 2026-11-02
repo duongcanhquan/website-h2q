@@ -1,0 +1,18 @@
+# Local secrets — never commit
+docs/SETUP_CREDENTIALS.local.md
+**/.env.local
+.env*.local
+.env
+
+# Dependencies / build
+node_modules/
+.next/
+out/
+dist/
+.turbo/
+*.tsbuildinfo
+
+# OS / editor
+.DS_Store
+*.log
+.vercel

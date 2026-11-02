@@ -1,0 +1,30 @@
+---
+description: Tech stack cố định WEBSITE H2Q — không đổi stack khi coding
+alwaysApply: true
+---
+
+# H2Q — Tech Stack (cố định)
+
+App thật nằm trong `h2q-website/`. **Không** scaffold CRA/Vite thay thế trừ khi user đổi stack bằng văn bản rõ.
+
+| Layer | Chọn | Ghi chú |
+|-------|------|---------|
+| Framework | **Next.js (App Router)** | `app/` directory, Server/Client Components đúng chuẩn |
+| Language | **TypeScript** | `strict: true` trong `tsconfig.json` |
+| Styling | **Tailwind CSS** + CSS variables | Theme tokens trong `globals.css` / `tailwind.config` |
+| UI kit | **shadcn/ui** | Component primitive; không thêm UI kit song song |
+| Backend (khi cần) | **Supabase** | Auth/DB/Storage; phase 1 có thể static |
+| Forms/validation | React Hook Form + Zod (khi có form) | |
+| Icons | lucide-react (đi kèm shadcn) | |
+
+## Reference (không phải runtime)
+
+- Design inspiration links: `awesome-web-design/`
+- Awesome meta: `awesome/readme.md`
+- Không nhúng nội dung awesome vào bundle production
+
+## Cấm
+
+- JavaScript thuần (`.js`/`.jsx`) cho code mới trong `h2q-website/`
+- CSS framework khác (Bootstrap, MUI core) song song với shadcn
+- Firebase thay Supabase trừ khi user yêu cầu đổi
