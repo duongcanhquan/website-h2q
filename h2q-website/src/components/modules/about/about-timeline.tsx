@@ -65,10 +65,7 @@ export function AboutTimeline({ locale }: { locale: Locale }) {
       <div className="relative mx-auto max-w-6xl px-4 py-14 md:px-6 md:py-20">
         <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <div className="max-w-xl">
-            <p className="text-xs font-medium uppercase tracking-[0.2em] text-primary">
-              Timeline
-            </p>
-            <h2 className="mt-2 font-display text-3xl font-semibold md:text-4xl">
+            <h2 className="font-display text-3xl font-semibold md:text-4xl">
               {copy.pages.about.timelineTitle}
             </h2>
             <p className="mt-3 text-sm text-muted md:text-base">

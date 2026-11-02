@@ -61,10 +61,7 @@ export function ServiceGallery({
       <div className="mx-auto max-w-6xl px-4 py-12 md:px-6 md:py-16">
         <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
           <div>
-            <p className="text-xs font-medium uppercase tracking-[0.2em] text-primary">
-              Remotion
-            </p>
-            <h2 className="mt-2 font-display text-2xl font-semibold md:text-3xl">
+            <h2 className="font-display text-2xl font-semibold md:text-3xl">
               {title}
             </h2>
           </div>

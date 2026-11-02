@@ -53,8 +53,8 @@ export const projects: ProjectItem[] = [
       en: "Replanned programme, night-shift build and tight FF&E change control.",
     },
     outcome: {
-      vi: "Vào vận hành đúng kỳ họp HĐQT; ngân sách thay đổi dưới ngưỡng đã khóa.",
-      en: "Went live before the board meeting; change cost stayed under the locked cap.",
+      vi: "Đưa vào sử dụng đúng kỳ họp HĐQT; chi phí phát sinh nằm dưới ngưỡng đã khóa.",
+      en: "Occupied before the board meeting; variation cost stayed under the locked cap.",
     },
     sector: { vi: "Văn phòng & trụ sở", en: "Offices & headquarters" },
     pillars: ["design", "build"],

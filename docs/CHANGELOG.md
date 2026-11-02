@@ -8,6 +8,7 @@ Format: `## YYYY-MM-DD` → bullet ngắn (thêm / sửa / xóa + lý do).
 
 ## 2026-11-02
 
+- Rà soát copy VI/EN: giảm giọng AI/slogan, tăng ngôn ngữ kỹ thuật dễ hiểu (site, services, posts, about timeline).
 - Làm kỹ trang chi tiết dịch vụ: gallery Remotion (play/pause), highlights, audience, sections SEO, process, deliverables, related services + steel motion.
 - Thêm overlay motion sắt thép / blueprint trên hero, About timeline, dịch vụ và cover tin tức.
 - Mở rộng 7 dịch vụ + ~10 bài tin, timeline cinematic Về H2Q, tối ưu mobile.
