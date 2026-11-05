@@ -1,7 +1,9 @@
 import Image from "next/image";
 import { cn } from "@/lib/cn";
 
-const LOGO_SRC = "/brand/h2q-logo.jpg";
+const LOGO_SRC = "/brand/h2q-logo.png";
+const LOGO_WIDTH = 412;
+const LOGO_HEIGHT = 221;
 
 type BrandLogoProps = {
   className?: string;
@@ -19,11 +21,11 @@ export function BrandLogo({
     <Image
       src={LOGO_SRC}
       alt={alt}
-      width={512}
-      height={286}
+      width={LOGO_WIDTH}
+      height={LOGO_HEIGHT}
       priority={priority}
       className={cn(
-        "h-9 w-auto object-contain md:h-10",
+        "h-9 w-auto bg-transparent object-contain md:h-10",
         className,
       )}
     />
