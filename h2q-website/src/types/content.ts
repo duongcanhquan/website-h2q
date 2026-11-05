@@ -131,9 +131,11 @@ export interface SiteCopy {
   };
   footer: {
     blurb: string;
-    area: string;
+    address: string;
     phone: string;
-    email: string;
+    phoneHref: string;
+    website: string;
+    websiteHref: string;
   };
   pages: {
     services: { title: string; sub: string };

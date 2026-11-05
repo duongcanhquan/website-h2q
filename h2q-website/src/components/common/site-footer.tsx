@@ -11,7 +11,7 @@ export function SiteFooter({ locale }: { locale: Locale }) {
     <footer className="border-t border-border bg-surface">
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 md:grid-cols-[1.4fr_1fr_1fr] md:px-6">
         <div>
-          <BrandLogo className="h-11 md:h-12" alt={copy.lockup} />
+          <BrandLogo className="h-12 md:h-14" alt={copy.lockup} />
           <p className="mt-4 max-w-md text-sm font-medium text-foreground">
             {copy.legalName}
           </p>
@@ -39,9 +39,24 @@ export function SiteFooter({ locale }: { locale: Locale }) {
             Contact
           </p>
           <ul className="mt-4 space-y-2 text-sm text-muted">
-            <li>{copy.footer.area}</li>
-            <li>{copy.footer.phone}</li>
-            <li>{copy.footer.email}</li>
+            <li>{copy.footer.address}</li>
+            <li>
+              <a
+                href={copy.footer.phoneHref}
+                className="hover:text-foreground"
+              >
+                {copy.footer.phone}
+              </a>
+            </li>
+            <li>
+              <a
+                href={copy.footer.websiteHref}
+                className="hover:text-foreground"
+                rel="noopener noreferrer"
+              >
+                {copy.footer.website}
+              </a>
+            </li>
           </ul>
         </div>
       </div>

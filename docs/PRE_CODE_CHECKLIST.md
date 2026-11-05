@@ -28,7 +28,8 @@ Cập nhật: 2026-11-05. App đã scaffold trong `h2q-website/`. Logo + legal n
 - [x] Implementation plan `2026-11-02-h2q-phase1-implementation.md`
 - [x] Scaffold `h2q-website/` + public VI/EN + admin nhẹ
 - [x] Brand tokens CSS + logo file (`brand/h2q-logo.jpg`) + legal name
-- [ ] Số liệu / chứng nhận / hotline / khu vực thật (còn `[H2Q:…]`)
+- [x] Hotline / địa chỉ / website thật (footer)
+- [ ] Số liệu / chứng nhận thật (còn chỗ `[H2Q:…]` nếu còn)
 - [ ] Tạo project Supabase Free + chạy `docs/supabase/0001_init.sql` + `.env.local`
 - [ ] Commit / push / Vercel (khi được lệnh)
 

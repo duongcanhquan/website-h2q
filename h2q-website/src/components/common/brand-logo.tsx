@@ -1,9 +1,10 @@
 import Image from "next/image";
 import { cn } from "@/lib/cn";
 
+/** Light-on-dark mark: white glyph + red accents, transparent PNG */
 const LOGO_SRC = "/brand/h2q-logo.png";
-const LOGO_WIDTH = 412;
-const LOGO_HEIGHT = 221;
+const LOGO_WIDTH = 1529;
+const LOGO_HEIGHT = 718;
 
 type BrandLogoProps = {
   className?: string;
@@ -25,7 +26,7 @@ export function BrandLogo({
       height={LOGO_HEIGHT}
       priority={priority}
       className={cn(
-        "h-9 w-auto bg-transparent object-contain md:h-10",
+        "h-10 w-auto bg-transparent object-contain md:h-12",
         className,
       )}
     />

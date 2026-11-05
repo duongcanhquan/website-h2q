@@ -2,9 +2,9 @@
 
 | Meta | Giá trị |
 |------|---------|
-| Phiên bản | `0.3.0` |
+| Phiên bản | `0.4.0` |
 | Ngày | 2026-11-05 |
-| Trạng thái | Logo + legal name locked from user handoff; Phase 1 CSS tokens kept |
+| Trạng thái | Light-on-dark logo + contact locked from user |
 
 ---
 
@@ -17,17 +17,22 @@
 | Lockup trên logo | **H2Q DESIGN & CONSTRUCTION** |
 | Slogan / tagline (logo) | **HONESTY · HARDWORK · QUALITY** |
 | Slogan UI (Phase 1) | Xây dựng có kiểm soát — từ thiết kế đến bàn giao |
-| Logo | `brand/h2q-logo.jpg` (source JPEG) · `brand/h2q-logo.png` + `h2q-website/public/brand/h2q-logo.png` (transparent runtime) |
+| Logo runtime | `brand/h2q-logo.png` · `h2q-website/public/brand/h2q-logo.png` (transparent, **white glyph + red accents**) |
+| Logo source | `brand/h2q-logo-white-source.jpg` (white page) · archive navy JPEG `brand/h2q-logo.jpg` |
+| Hotline | **0858 321 321** (`tel:0858321321`) |
+| Địa chỉ | **172 Phú Diễn, Hà Nội** |
+| Website | **www.h2q.com.vn** → `https://www.h2q.com.vn` |
 | Ngôn ngữ UI | **VI + EN** (mặc định VI tại `/`) |
 | Định vị | Thiết kế · Thi công · Quản lý dự án (EPC cho chủ đầu tư) |
 | Tone | Tự tin, rõ, bằng chứng; hiện đại |
 
 ## Logo notes
 
-- Source JPEG: 512×286, nền trắng (lưu `brand/h2q-logo.jpg`).
-- Runtime PNG: nền **transparent** (alpha), crop chặt — `brand/h2q-logo.png` / `h2q-website/public/brand/h2q-logo.png` (~412×221). Mark navy + accent đỏ-cam; không white plate trên UI tối.
-- Không thay palette CSS Phase 1 (slate + amber) chỉ vì màu logo.
-- UI: `<Image>` từ `/brand/h2q-logo.png` (`BrandLogo`), `bg-transparent`.
+- Primary UI mark is **light-on-dark**: white artwork + red sun / Q-tail, transparent PNG (no white plate).
+- Knocked out from user source `h2q-logo-white-source.jpg` (~1677×938); runtime crop ~1529×718.
+- Suitable for dark header/footer (`bg-background` / `bg-surface`). Do not place on white without a dark variant.
+- UI: `<Image>` via `BrandLogo` → `/brand/h2q-logo.png`, `bg-transparent`.
+- Phase 1 CSS palette (slate + amber) unchanged.
 
 ## Palette (tokens trong `h2q-website/src/app/globals.css`)
 
@@ -40,7 +45,7 @@
 | `--steel` | `#4f8faf` | Technical secondary |
 | `--muted` | `#9aa3b5` | |
 
-Logo accents (tham chiếu, chưa map token): deep navy + muted reddish-orange.
+Logo accents: white + red (runtime) · archive navy + orange in `brand/h2q-logo.jpg`.
 
 Nguồn cảm hứng màu/gradient: Coolors / UI Gradients / Gradients.io trong `awesome-web-design/`.
 
@@ -60,4 +65,4 @@ Unsplash construction photography (awesome-web-design → Images) — thay bằn
 - `awesome-web-design/`: Inspiration (Awwwards), Colors, Typography (Fontpair), Images (Unsplash), Guidelines (Laws of UX)
 - `awesome/`: Next.js, Tailwind CSS lists
 - uiCookies Bedrock: IA / trust sections (không Bootstrap runtime)
-- Brand handoff (2026-11-05): legal name + logo JPEG
+- Brand handoff (2026-11-05): legal name + white logo source + contact
