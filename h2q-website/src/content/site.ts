@@ -3,6 +3,10 @@ import type { Dictionary } from "@/types/content";
 export const siteCopy: Dictionary = {
   vi: {
     brand: "H2Q",
+    legalName:
+      "CÔNG TY CỔ PHẦN TƯ VẤN THIẾT KẾ VÀ XÂY DỰNG H2Q",
+    lockup: "H2Q DESIGN & CONSTRUCTION",
+    tagline: "HONESTY · HARDWORK · QUALITY",
     nav: {
       services: "Dịch vụ",
       projects: "Dự án",
@@ -135,7 +139,7 @@ export const siteCopy: Dictionary = {
       },
     },
     footer: {
-      blurb: "H2Q — thiết kế, thi công và quản lý dự án cho chủ đầu tư.",
+      blurb: "H2Q DESIGN & CONSTRUCTION — HONESTY · HARDWORK · QUALITY",
       area: "Khu vực phục vụ: [H2Q: khu vực]",
       phone: "[H2Q: hotline]",
       email: "contact@h2q.vn",
@@ -196,6 +200,10 @@ export const siteCopy: Dictionary = {
   },
   en: {
     brand: "H2Q",
+    legalName:
+      "CÔNG TY CỔ PHẦN TƯ VẤN THIẾT KẾ VÀ XÂY DỰNG H2Q",
+    lockup: "H2Q DESIGN & CONSTRUCTION",
+    tagline: "HONESTY · HARDWORK · QUALITY",
     nav: {
       services: "Services",
       projects: "Projects",
@@ -328,7 +336,7 @@ export const siteCopy: Dictionary = {
       },
     },
     footer: {
-      blurb: "H2Q — design, construction and project management for owners.",
+      blurb: "H2Q DESIGN & CONSTRUCTION — HONESTY · HARDWORK · QUALITY",
       area: "Service area: [H2Q: region]",
       phone: "[H2Q: hotline]",
       email: "contact@h2q.vn",

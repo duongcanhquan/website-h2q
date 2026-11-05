@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { BrandLogo } from "@/components/common/brand-logo";
 import { getCopy } from "@/content/site";
 import { pathFor, type Locale, type NavKey } from "@/lib/i18n";
 
@@ -10,8 +11,11 @@ export function SiteFooter({ locale }: { locale: Locale }) {
     <footer className="border-t border-border bg-surface">
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 md:grid-cols-[1.4fr_1fr_1fr] md:px-6">
         <div>
-          <p className="font-display text-2xl font-semibold">{copy.brand}</p>
-          <p className="mt-3 max-w-md text-sm text-muted">{copy.footer.blurb}</p>
+          <BrandLogo className="h-11 md:h-12" alt={copy.lockup} />
+          <p className="mt-4 max-w-md text-sm font-medium text-foreground">
+            {copy.legalName}
+          </p>
+          <p className="mt-2 max-w-md text-sm text-muted">{copy.footer.blurb}</p>
         </div>
         <div>
           <p className="text-xs font-medium tracking-[0.18em] text-primary uppercase">
@@ -41,8 +45,8 @@ export function SiteFooter({ locale }: { locale: Locale }) {
           </ul>
         </div>
       </div>
-      <div className="border-t border-border py-4 text-center text-xs text-muted">
-        © {new Date().getFullYear()} H2Q
+      <div className="border-t border-border px-4 py-4 text-center text-xs text-muted">
+        © {new Date().getFullYear()} {copy.legalName}
       </div>
     </footer>
   );
