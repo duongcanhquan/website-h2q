@@ -140,9 +140,11 @@ export const siteCopy: Dictionary = {
     },
     footer: {
       blurb: "H2Q DESIGN & CONSTRUCTION — HONESTY · HARDWORK · QUALITY",
-      area: "Khu vực phục vụ: [H2Q: khu vực]",
-      phone: "[H2Q: hotline]",
-      email: "contact@h2q.vn",
+      address: "172 Phú Diễn, Hà Nội",
+      phone: "0858 321 321",
+      phoneHref: "tel:0858321321",
+      website: "www.h2q.com.vn",
+      websiteHref: "https://www.h2q.com.vn",
     },
     pages: {
       services: {
@@ -337,9 +339,11 @@ export const siteCopy: Dictionary = {
     },
     footer: {
       blurb: "H2Q DESIGN & CONSTRUCTION — HONESTY · HARDWORK · QUALITY",
-      area: "Service area: [H2Q: region]",
-      phone: "[H2Q: hotline]",
-      email: "contact@h2q.vn",
+      address: "172 Phú Diễn, Hà Nội",
+      phone: "0858 321 321",
+      phoneHref: "tel:0858321321",
+      website: "www.h2q.com.vn",
+      websiteHref: "https://www.h2q.com.vn",
     },
     pages: {
       services: {

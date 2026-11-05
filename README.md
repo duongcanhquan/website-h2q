@@ -15,7 +15,7 @@ npm run build         # kiểm tra production build
 ## Docs
 
 1. [`AGENTS.md`](./AGENTS.md) và [`.cursorrules`](./.cursorrules)
-2. Brand: [`docs/BRAND.md`](./docs/BRAND.md) · logo: [`brand/h2q-logo.png`](./brand/h2q-logo.png) (transparent)
+2. Brand: [`docs/BRAND.md`](./docs/BRAND.md) · logo: [`brand/h2q-logo.png`](./brand/h2q-logo.png) (transparent white+red)
 3. Changelog: [`docs/CHANGELOG.md`](./docs/CHANGELOG.md)
 4. Deploy Vercel: [`docs/VERCEL.md`](./docs/VERCEL.md) — **Root Directory = `h2q-website`**
 

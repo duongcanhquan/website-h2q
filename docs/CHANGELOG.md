@@ -8,7 +8,9 @@ Format: `## YYYY-MM-DD` → bullet ngắn (thêm / sửa / xóa + lý do).
 
 ## 2026-11-05
 
-- Logo runtime đổi sang PNG nền trong suốt (`brand/h2q-logo.png`, `h2q-website/public/brand/h2q-logo.png`); bỏ white plate trên header/footer.
+- Logo light-on-dark mới (white + đỏ, PNG trong suốt) từ `h2q-logo-white-source.jpg`; header/footer dùng mark trắng trên nền tối.
+- Cập nhật liên hệ: hotline `0858 321 321`, địa chỉ `172 Phú Diễn, Hà Nội`, website `www.h2q.com.vn` (`site.ts` + footer links).
+- Logo runtime PNG nền trong suốt (`brand/h2q-logo.png`, `h2q-website/public/brand/h2q-logo.png`); bỏ white plate trên header/footer.
 - Chẩn đoán site: app trong `h2q-website/` build OK sau `npm install`; lỗi vận hành thường gặp = chạy/deploy từ root (không có Next app) hoặc Vercel Root Directory trống.
 - Thêm `package.json` root (`npm run install:app` / `dev` / `build`) + cập nhật `README.md`, `docs/VERCEL.md`.
 - Gắn brand user: logo + legal name/lockup/tagline; header/footer/hero/metadata — không đổi palette CSS Phase 1.
