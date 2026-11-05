@@ -17,16 +17,17 @@
 | Lockup trên logo | **H2Q DESIGN & CONSTRUCTION** |
 | Slogan / tagline (logo) | **HONESTY · HARDWORK · QUALITY** |
 | Slogan UI (Phase 1) | Xây dựng có kiểm soát — từ thiết kế đến bàn giao |
-| Logo | `brand/h2q-logo.jpg` (source) · `h2q-website/public/brand/h2q-logo.jpg` (runtime) |
+| Logo | `brand/h2q-logo.jpg` (source JPEG) · `brand/h2q-logo.png` + `h2q-website/public/brand/h2q-logo.png` (transparent runtime) |
 | Ngôn ngữ UI | **VI + EN** (mặc định VI tại `/`) |
 | Định vị | Thiết kế · Thi công · Quản lý dự án (EPC cho chủ đầu tư) |
 | Tone | Tự tin, rõ, bằng chứng; hiện đại |
 
 ## Logo notes
 
-- File: JPEG 512×286, nền trắng, mark navy + accent đỏ-cam (mặt trời / nét chéo).
-- Không thay palette CSS Phase 1 (slate + amber) chỉ vì màu logo — giữ theme hiện tại trừ khi ship logo/identity bị xung đột rõ.
-- UI ưu tiên `<Image>` từ `/brand/h2q-logo.jpg` thay wordmark text thuần.
+- Source JPEG: 512×286, nền trắng (lưu `brand/h2q-logo.jpg`).
+- Runtime PNG: nền **transparent** (alpha), crop chặt — `brand/h2q-logo.png` / `h2q-website/public/brand/h2q-logo.png` (~412×221). Mark navy + accent đỏ-cam; không white plate trên UI tối.
+- Không thay palette CSS Phase 1 (slate + amber) chỉ vì màu logo.
+- UI: `<Image>` từ `/brand/h2q-logo.png` (`BrandLogo`), `bg-transparent`.
 
 ## Palette (tokens trong `h2q-website/src/app/globals.css`)
 
