@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { BrandLogo } from "@/components/common/brand-logo";
 import { getCopy } from "@/content/site";
 import { cn } from "@/lib/cn";
 import {
@@ -33,9 +34,10 @@ export function SiteHeader({ locale }: { locale: Locale }) {
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4 md:h-[4.5rem] md:px-6">
         <Link
           href={pathFor(locale, "home")}
-          className="font-display text-xl font-semibold tracking-tight text-foreground"
+          className="inline-flex items-center"
+          aria-label={copy.lockup}
         >
-          <span className="text-primary">H</span>2Q
+          <BrandLogo priority alt={copy.lockup} />
         </Link>
 
         <nav className="hidden items-center gap-6 md:flex">

@@ -32,8 +32,11 @@ export function HeroSection({ locale }: { locale: Locale }) {
         aria-hidden
       />
       <div className="relative z-10 mx-auto flex min-h-[100svh] max-w-6xl flex-col justify-end px-4 pb-12 pt-24 sm:min-h-[88vh] sm:pb-16 md:px-6 md:pb-24 md:pt-28">
-        <p className="font-display text-sm font-semibold tracking-[0.28em] text-primary uppercase">
-          {copy.brand}
+        <p className="font-display text-sm font-semibold tracking-[0.22em] text-primary uppercase sm:tracking-[0.28em]">
+          {copy.lockup}
+        </p>
+        <p className="mt-2 text-xs font-medium tracking-[0.16em] text-foreground/80 uppercase sm:text-sm">
+          {copy.tagline}
         </p>
         <h1 className="mt-3 max-w-4xl font-display text-[1.85rem] leading-[1.12] font-semibold break-words text-foreground sm:mt-4 sm:text-4xl md:text-6xl lg:text-[4.25rem]">
           {copy.hero.headline}

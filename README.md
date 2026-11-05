@@ -2,11 +2,22 @@
 
 Workspace xây website **H2Q** (Next.js App Router · TypeScript · Tailwind · shadcn · Supabase).
 
-## Bắt đầu
+App runtime: **`h2q-website/`**.
 
-1. Đọc [`AGENTS.md`](./AGENTS.md) và [`.cursorrules`](./.cursorrules)
-2. Theo dõi thay đổi: [`docs/CHANGELOG.md`](./docs/CHANGELOG.md)
-3. Checklist: [`docs/PRE_CODE_CHECKLIST.md`](./docs/PRE_CODE_CHECKLIST.md)
+## Chạy local
+
+```bash
+npm run install:app   # hoặc: cd h2q-website && npm install
+npm run dev           # http://localhost:3000
+npm run build         # kiểm tra production build
+```
+
+## Docs
+
+1. [`AGENTS.md`](./AGENTS.md) và [`.cursorrules`](./.cursorrules)
+2. Brand: [`docs/BRAND.md`](./docs/BRAND.md) · logo: [`brand/h2q-logo.jpg`](./brand/h2q-logo.jpg)
+3. Changelog: [`docs/CHANGELOG.md`](./docs/CHANGELOG.md)
+4. Deploy Vercel: [`docs/VERCEL.md`](./docs/VERCEL.md) — **Root Directory = `h2q-website`**
 
 ## Repo
 
@@ -16,5 +27,3 @@ https://github.com/duongcanhquan/website-h2q
 
 - [`awesome/`](./awesome/) — [sindresorhus/awesome](https://github.com/sindresorhus/awesome)
 - [`awesome-web-design/`](./awesome-web-design/) — [nicolesaidy/awesome-web-design](https://github.com/nicolesaidy/awesome-web-design)
-
-App runtime sẽ nằm trong `h2q-website/` sau khi scaffold.

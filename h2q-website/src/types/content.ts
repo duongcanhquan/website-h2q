@@ -93,6 +93,9 @@ export interface TimelineChapter {
 
 export interface SiteCopy {
   brand: string;
+  legalName: string;
+  lockup: string;
+  tagline: string;
   nav: Record<string, string>;
   ctaQuote: string;
   ctaProjects: string;

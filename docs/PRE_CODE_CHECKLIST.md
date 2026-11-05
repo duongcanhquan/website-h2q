@@ -1,6 +1,6 @@
 # PRE-CODE CHECKLIST — Nền tảng WEBSITE H2Q
 
-Cập nhật: 2026-11-02. **Chưa scaffold `h2q-website/`** — chờ yêu cầu nội dung/coding từ user.
+Cập nhật: 2026-11-05. App đã scaffold trong `h2q-website/`. Logo + legal name đã gắn từ brand handoff.
 
 ## Đã đủ (agent sẵn sàng khi có lệnh + brand)
 
@@ -27,7 +27,8 @@ Cập nhật: 2026-11-02. **Chưa scaffold `h2q-website/`** — chờ yêu cầu
 - [x] User lệnh code Phase 1 + spec structure
 - [x] Implementation plan `2026-11-02-h2q-phase1-implementation.md`
 - [x] Scaffold `h2q-website/` + public VI/EN + admin nhẹ
-- [x] Brand tokens CSS (logo file / số liệu thật còn thiếu)
+- [x] Brand tokens CSS + logo file (`brand/h2q-logo.jpg`) + legal name
+- [ ] Số liệu / chứng nhận / hotline / khu vực thật (còn `[H2Q:…]`)
 - [ ] Tạo project Supabase Free + chạy `docs/supabase/0001_init.sql` + `.env.local`
 - [ ] Commit / push / Vercel (khi được lệnh)
 

@@ -6,6 +6,12 @@ Format: `## YYYY-MM-DD` → bullet ngắn (thêm / sửa / xóa + lý do).
 
 ---
 
+## 2026-11-05
+
+- Chẩn đoán site: app trong `h2q-website/` build OK sau `npm install`; lỗi vận hành thường gặp = chạy/deploy từ root (không có Next app) hoặc Vercel Root Directory trống.
+- Thêm `package.json` root (`npm run install:app` / `dev` / `build`) + cập nhật `README.md`, `docs/VERCEL.md`.
+- Gắn brand user: logo `brand/h2q-logo.jpg` + `h2q-website/public/brand/h2q-logo.jpg`; cập nhật `docs/BRAND.md` (legal name, lockup, tagline); header/footer/hero/metadata dùng logo + identity từ logo — không đổi palette CSS Phase 1.
+
 ## 2026-11-02
 
 - Rà soát copy VI/EN: giảm giọng AI/slogan, tăng ngôn ngữ kỹ thuật dễ hiểu (site, services, posts, about timeline).

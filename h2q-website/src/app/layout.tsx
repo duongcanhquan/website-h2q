@@ -16,11 +16,11 @@ const dmSans = DM_Sans({
 
 export const metadata: Metadata = {
   title: {
-    default: "H2Q — Design · Build · Project Management",
+    default: "H2Q Design & Construction — Honesty · Hardwork · Quality",
     template: "%s · H2Q",
   },
   description:
-    "H2Q đồng hành chủ đầu tư qua thiết kế, thi công và quản lý dự án.",
+    "CÔNG TY CỔ PHẦN TƯ VẤN THIẾT KẾ VÀ XÂY DỰNG H2Q — H2Q DESIGN & CONSTRUCTION.",
 };
 
 export default function RootLayout({

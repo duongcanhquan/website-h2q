@@ -1,0 +1,12 @@
+{
+  "name": "website-h2q",
+  "private": true,
+  "description": "Workspace root — Next.js app lives in h2q-website/",
+  "scripts": {
+    "dev": "npm run dev --prefix h2q-website",
+    "build": "npm run build --prefix h2q-website",
+    "start": "npm run start --prefix h2q-website",
+    "lint": "npm run lint --prefix h2q-website",
+    "install:app": "npm install --prefix h2q-website"
+  }
+}
